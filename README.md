@@ -6,7 +6,7 @@
 - Node 14
 
 ## Features Impletmented
-- A form user can enter address (via google geocoding api) or auto detect location (via ipinfo) to search weather condition for specific locations. Used 2-way data binding with **ngModel** for form input.
+- A **Bootstrap** form user can enter address (via google geocoding api) or auto detect location (via ipinfo) to search weather condition for specific locations. Used 2-way data binding with **ngModel** for form input.
 - Submitting the form will make an **ajax** call (with Angular HttpClient) to the **node.js** backend (express.js), which will make another asynchronous call to [tomorrow.io](https://app.tomorrow.io/) API to fetch weather data.
 - (nav tab 1) A general result table is displayed when ajax call finishes, with dates, weather condition, max temperature, min temperature and wind speed. 
 - (nav tab 2) A [HighChart](https://www.highcharts.com/) showing temperature variation by day for the next 15 days.
