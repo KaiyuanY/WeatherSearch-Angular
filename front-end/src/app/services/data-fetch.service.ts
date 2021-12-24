@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class DataFetchService {
   weatherUrl = "https://hw8-cs571-2021.wl.r.appspot.com/weather?";
   googleGeoCodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?address="
-  geocodingKey = "AIzaSyDpqQYgsWccorymscyUeIHNdREXA9T_5ts";
+  geocodingKey = "KEY_REMOVED_FOR_SECURITY";
   ipinfoUrl = "https://ipinfo.io/json?token=ab3350e7e4c394";
 
   constructor(private _http: HttpClient) { }
