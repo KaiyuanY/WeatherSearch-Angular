@@ -1,0 +1,14 @@
+.row{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#results-card{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.bi-star-fill{
+    fill: yellow;
+}

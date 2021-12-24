@@ -1,0 +1,29 @@
+.red_star{
+    color: red;
+}
+#form-container{
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #ebe8e8;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 14px;
+    border: 2px solid #e0dede;
+    border-radius: 10px;
+}
+#title{
+    text-align: center;
+    font-weight: bold;
+}
+nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.progress{
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}

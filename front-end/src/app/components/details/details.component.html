@@ -1,0 +1,92 @@
+<div class="container">
+  <ul class="nav nav-fill">
+    <li class="nav-item "><a class="btn btn-outline-secondary float-left" style=" width: 60px; height: 40px; margin-bottom: -20px;" (click)="onBack()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+      </svg></a></li>
+      <li class="nav-item"><h4>{{data.date.toLocaleString('en-US', {weekday: 'long', year: 'numeric', month: 'short', day: 'numeric'})}}</h4></li>
+
+    <li class="nav-item "><a class="btn btn-primary float-right" style=" width: 60px; height: 40px; margin-bottom: 10px;" href="https://twitter.com/intent/tweet?text=The%20temperature%20in%20{{data.city}},%20{{data.state}}%20on%20{{data.date.toLocaleString('en-US', {weekday: 'long', year: 'numeric', month: 'short', day: 'numeric'})}}%20is%20{{data.tempApparent}}F.%20The%20weather%20conditions
+%20are%20{{data.status}}%20#CSCI571WeatherSearch" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+        </svg>
+    </a></li>
+  </ul>
+</div>
+<table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">Status</th>
+        <td>{{data.status}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Max Temperature</th>
+        <td>{{data.tempHigh}} &deg;F</td>
+      </tr>
+      <tr>
+        <th scope="row">Min Temperature</th>
+        <td>{{data.tempLow}} &deg;F</td>
+      </tr>
+      <tr>
+        <th scope="row">Apparent Temperature</th>
+        <td>{{data.tempApparent}} &deg;F</td>
+      </tr>
+      <tr>
+        <th scope="row">Sun Rise Time</th>
+        <td>{{data.sunrise.toLocaleTimeString()}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Sun Set Time</th>
+        <td>{{data.sunset.toLocaleTimeString()}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Humidity</th>
+        <td>{{data.humidity}}%</td>
+      </tr>
+      <tr>
+        <th scope="row">Wind Speed</th>
+        <td>{{data.windSpeed}} mph</td>
+      </tr>
+      <tr>
+        <th scope="row">Visibility</th>
+        <td>{{data.visibility}} mi</td>
+      </tr>
+      <tr>
+        <th scope="row">Cloud Cover</th>
+        <td>{{data.cloudCover}}%</td>
+      </tr>
+    </tbody>
+</table>
+<!-- google maps goes here -->
+<div #map  style="width:100%;height:400px">
+    <!-- <google-map *ngIf="data.state != ''"
+        height="400px"
+        width="100%"
+        [zoom]="zoom"
+        [options]="options"
+    >
+    </google-map> -->
+</div>
+<!-- <script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    const uluru = { lat: data.lat, lng: data.lon };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
+  }
+</script>
+-->
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpqQYgsWccorymscyUeIHNdREXA9T_5ts&callback=initMap&libraries=&v=weekly"
+async
+></script> --> -->
